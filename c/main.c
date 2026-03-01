@@ -2,8 +2,8 @@
 
 int main()
 {
-    // test function calls, don't wind the hardcoded shit
-    writeout(get_string());
-    square(4);
+    // test function calls, don't mind the hardcoded shit
+    stringout(get_string());
+    square(get_int());
     return 0;
 }
