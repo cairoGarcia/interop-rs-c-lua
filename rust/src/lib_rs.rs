@@ -1,5 +1,17 @@
-use std::ffi::{c_char, CStr, CString};
+use std::ffi::{CString};
 use std::io;
+
+/*
+unsafe extern "C" {
+     fn printf(restrict: *const u8, ...) -> i32;
+}
+*/
+
+/* TODO!
+ *
+ * Implement a Macro to use printf safely.
+ *
+ */
 
 #[unsafe(no_mangle)]
 pub extern "C" fn get_string() -> *const i8 {
@@ -15,9 +27,8 @@ pub extern "C" fn get_string() -> *const i8 {
         if ipt.len() == 0 { continue };
 
         /* adds null terminator to string */
-        let ipt: CString = CString::new(ipt).expect("CString panic");
+        let ipt: CString = CString::new(ipt).unwrap();
 
-        /* converts to C char pointer safer type */
         let ipt = ipt.into_raw();
         let ipt: *const i8 = ipt;
         return ipt;
@@ -80,11 +91,4 @@ pub extern "C" fn square(size: u8) {
         }
         print!("\n");
     }
-}
-
-#[unsafe(no_mangle)]
-/* funnier print */
-pub extern "C" fn stringout(s: *const c_char) {
-    let s: String = unsafe { CStr::from_ptr(s).to_string_lossy().into_owned() };
-    println!("{s}");
 }
