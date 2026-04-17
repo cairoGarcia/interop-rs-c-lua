@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "lib_rs"
+name = "rs"
 version = "0.1.0"
