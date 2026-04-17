@@ -3,8 +3,10 @@
 
 int main()
 {
-    char *s = get_string();
-    printf("%s\n", s);
-    square(get_int());
+    char *s = get_string("String: ");
+    get_i32("i32: ");
+    get_u8("u8: ");
+    get_char("char: ");
+    square(get_i32("square size: "));
     return 0;
 }
