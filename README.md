@@ -1,14 +1,17 @@
-Simple project I made to practice interop, just run make and everything should work.
+### Simple project I made to practice interop, just run Make and everything should work.
 
-Goals:
-    Rust/C interop: done
-    Rust printf: todo
-    C/Lua interop: todo
-    Rust/Lua interop: todo
-    Equine interop: todo (completely extra, not my main goal)
+  | Goals | Status |
+  | :--- | --: |
+  | Rust/C interop | done |
+  | Rust printf | todo |
+  | C/Lua interop | todo |
+  | Rust/Lua interop | todo |
+  | Equine interop | todo|
 
-Dependencies: 
-    Rust,
-    GCC,
-    *Lua 5.4 (Not yet implemented),
-    GNU/Linux.
+  | Dependencies |
+  | :--- |
+  | GCC |
+  | Make |
+  | Rust Compiler |
+  | Lua Interpreter |
+  | Posix OS |
