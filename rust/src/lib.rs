@@ -100,8 +100,8 @@ pub extern "C" fn get_u8(s: *const i8) -> u8 {
 /* draws a square */
 pub extern "C" fn square(size: u8)
 {
-    for _h in 0..size {
-        for _w in 0..size {
+    for _ in 0..size {
+        for _ in 0..size {
             print!("#");
         }
         print!("\n");
