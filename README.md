@@ -4,8 +4,8 @@
   | :--- | --: |
   | Rust/C interop | done |
   | Rust printf | todo |
-  | C/Lua interop | todo |
-  | Rust/Lua interop | todo |
+  | C/Lua interop | done |
+  | Rust/Lua interop | done |
   | Equine interop | todo|
 
   | Dependencies |
@@ -13,5 +13,5 @@
   | GCC |
   | Make |
   | Rust Compiler |
-  | Lua Interpreter |
+  | Lua 5.5 Interpreter |
   | Posix OS |
