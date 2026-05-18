@@ -2,13 +2,11 @@
 #include <lauxlib.h>
 #include <lualib.h>
 
-// rust safe function
+// rust safe functions definitions
 char *get_string(const char *s);
 char get_char(const char *s);
 int get_i32(const char *s);
 unsigned char get_u8(const char *s);
-
-// rust safe function
 void square(unsigned char size);
 
 static int get_stringL(lua_State *L) {
@@ -51,7 +49,7 @@ static const luaL_Reg lib_c [] = {
     {"get_i32", get_i32L},
     {"get_string", get_stringL},
     {"get_char", get_charL},
-    {NULL, NULL},  /* sentinel */
+    {NULL, NULL},
 };
 
 int luaopen_lib_c(lua_State *L) {
